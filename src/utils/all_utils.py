@@ -7,3 +7,8 @@ def read_yaml(path_to_yaml:str) -> dict:
 
     return content
 
+
+def create_directory(dirs:list):
+    for dirs_path in dirs:
+        os.makedirs(dirs_path,exist_ok=True)
+        print("Directory created for data!!")
