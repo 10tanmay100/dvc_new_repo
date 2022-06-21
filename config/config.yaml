@@ -1,0 +1,13 @@
+#Here we talk about data source
+
+data_source: http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+
+artifacts:
+  artifcats_dir: artifacts
+  raw_local_dir: raw_local_dir
+  raw_local_file: data.csv
+
+
+
+
+
