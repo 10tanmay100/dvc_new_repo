@@ -10,7 +10,10 @@ artifacts:
 
   split_local_dir: split_local_dir
   train_file: train.csv
-  test_file : test.csv 
+  test_file : test.csv
+
+  model_local_dir: model_local_dir
+  model_file: Elasticnet.model
 
 
 
