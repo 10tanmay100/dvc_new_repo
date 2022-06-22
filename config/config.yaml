@@ -15,6 +15,9 @@ artifacts:
   model_local_dir: model_local_dir
   model_file: Elasticnet.model
 
+  score_local_dir: score_local_dir
+  json_file: score.json
+
 
 
 

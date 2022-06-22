@@ -1,4 +1,4 @@
-from src.utils.all_utils import read_yaml,create_directory,save_data_local
+from src.utils.all_utils import read_yaml,create_directory,save_data_local,store_score
 import argparse
 import pandas as pd
 import numpy as np
@@ -27,6 +27,12 @@ def split_data(config_path,params_path):
     test_file=config["artifacts"]["test_file"]
     model_local_dir=config["artifacts"]["model_local_dir"]
     model_file=config["artifacts"]["model_file"]
+    score_local_dir=config["artifacts"]["score_local_dir"]
+    json_file_path=os.path.join(artifacts_dir,config["artifacts"]["score_local_dir"],config["artifacts"]["json_file"])
+
+    create_directory([os.path.join(artifacts_dir,score_local_dir)])
+
+
 
     #path of storing model
     model_file_path=os.path.join(artifacts_dir,model_local_dir,model_file)
@@ -42,7 +48,9 @@ def split_data(config_path,params_path):
     model=joblib.load(model_file_path)
     predicted_data=model.predict(x_test)
     mae,rmae,r2=evaluation_metrics(y_test,predicted_data)
-    print(mae,rmae,r2)
+    d={"mae":mae,"rmae":rmae,"r2":r2}
+    store_score(d,json_file_path)
+
 
 
 if __name__=="__main__":
