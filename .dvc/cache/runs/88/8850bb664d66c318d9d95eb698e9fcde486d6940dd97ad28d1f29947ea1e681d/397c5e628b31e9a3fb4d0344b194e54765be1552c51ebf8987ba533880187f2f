@@ -1,0 +1,22 @@
+cmd: python src/stage_02_split_data.py --config=config/config.yaml --params=params.yaml
+deps:
+- path: config/config.yaml
+  md5: 5202da2099e19847789ef2e7358a0ee7
+  size: 341
+- path: src/stage_02_split_data.py
+  md5: edcc167932fc062db6fadcdb9e1700f9
+  size: 1739
+- path: src/utils/all_utils.py
+  md5: 08b621bf6942ac0d642bab0bb981abc9
+  size: 450
+params:
+  params.yaml:
+    base.random_state: 0
+    base.test_size: 0.3
+outs:
+- path: artifacts/split_local_dir/test.csv
+  md5: 2e1a0cd1a010c515d57fad9ca673413d
+  size: 30206
+- path: artifacts/split_local_dir/train.csv
+  md5: 91cdc189d9d5ad324aec12ee789a6e92
+  size: 70427

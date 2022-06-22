@@ -12,3 +12,9 @@ def create_directory(dirs:list):
     for dirs_path in dirs:
         os.makedirs(dirs_path,exist_ok=True)
         print("Directory created for data!!")
+
+
+def save_data_local(data,data_path):
+    data.to_csv(data_path)
+    print(f"Data Stored in {data_path}")
+

@@ -8,6 +8,11 @@ artifacts:
   raw_local_file: data.csv
 
 
+  split_local_dir: split_local_dir
+  train_file: train.csv
+  test_file : test.csv 
+
+
 
 
 
