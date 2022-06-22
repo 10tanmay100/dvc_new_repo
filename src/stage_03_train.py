@@ -1,7 +1,3 @@
-from operator import mod
-from pyexpat import model
-from venv import create
-from idna import check_nfc
 from src.utils.all_utils import read_yaml,create_directory,save_data_local
 import argparse
 import pandas as pd

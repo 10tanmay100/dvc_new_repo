@@ -1,0 +1,24 @@
+cmd: python src/stage_03_train.py --config=config/config.yaml --params=params.yaml
+deps:
+- path: artifacts/raw_local_dir/data.csv
+  md5: 7d814a1bda02145efe703f4e1c01847a
+  size: 93599
+- path: config/config.yaml
+  md5: ef2680421c6abe34e14a7b43dc67fe5e
+  size: 410
+- path: src/stage_03_train.py
+  md5: cf0a1802bc8640e27815d0e44e05bcf2
+  size: 1734
+- path: src/utils/all_utils.py
+  md5: 08b621bf6942ac0d642bab0bb981abc9
+  size: 450
+params:
+  params.yaml:
+    base.random_state: 0
+    base.test_size: 0.3
+    model_params.ElasticNet.alpha: 0.5
+    model_params.ElasticNet.l1_ratio: 1
+outs:
+- path: artifacts/model_local_dir/Elasticnet.model
+  md5: f8fe434abcb359df0fe63940ae54adca
+  size: 1333
